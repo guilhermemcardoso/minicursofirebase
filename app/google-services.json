@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "759176153094",
+    "firebase_url": "https://minicurso-ifsp.firebaseio.com",
+    "project_id": "minicurso-ifsp",
+    "storage_bucket": "minicurso-ifsp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759176153094:android:5cedede69b7c0304",
+        "android_client_info": {
+          "package_name": "cardoso.guilherme.minicursofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759176153094-h485vp2k82mi7mntb5kcqhuch5vcuvjc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cardoso.guilherme.minicursofirebase",
+            "certificate_hash": "6c9fb0ef5ed17cbb43c65cb3e600f52ed30de87b"
+          }
+        },
+        {
+          "client_id": "759176153094-7e2n4i2njknlkjjaeeq7067bg9sj5qfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXdn9ueNTOX-iJvaoVOzrnp-JfhFB8V7Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759176153094-7e2n4i2njknlkjjaeeq7067bg9sj5qfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
