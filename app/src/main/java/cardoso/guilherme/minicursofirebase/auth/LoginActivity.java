@@ -34,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        setTitle("Login");
+
         mAuth = FirebaseAuth.getInstance();
 
         editTextEmail = findViewById(R.id.edit_text_email);

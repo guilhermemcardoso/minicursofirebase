@@ -19,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnCreateAccount = findViewById(R.id.btnCreateAccount);
-        btnLogin = findViewById(R.id.btnLogin);
+        setTitle("Tela Inicial");
+
+        btnCreateAccount = findViewById(R.id.createAccount);
+        btnLogin = findViewById(R.id.login);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

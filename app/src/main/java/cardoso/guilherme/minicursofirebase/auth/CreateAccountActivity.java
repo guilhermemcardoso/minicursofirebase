@@ -34,6 +34,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        setTitle("Criar conta");
+
         mAuth = FirebaseAuth.getInstance();
 
         editTextEmail = findViewById(R.id.edit_text_email);
@@ -70,6 +72,16 @@ public class CreateAccountActivity extends AppCompatActivity {
                             Toast.makeText(CreateAccountActivity.this,
                                     "Conta criada com sucesso.",
                                     Toast.LENGTH_SHORT).show();
+
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            if (user != null) {
+                                // User is signed in
+                                mAuth.signOut();
+                            } else {
+                                // User is signed out
+
+                            }
 
                             finish();
                         } else {
