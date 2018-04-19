@@ -8,11 +8,13 @@ import android.widget.Button;
 
 import cardoso.guilherme.minicursofirebase.auth.CreateAccountActivity;
 import cardoso.guilherme.minicursofirebase.auth.LoginActivity;
+import cardoso.guilherme.minicursofirebase.remote.AdActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnLogin;
     private Button btnCreateAccount;
+    private Button btnAdScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnCreateAccount = findViewById(R.id.createAccount);
         btnLogin = findViewById(R.id.login);
+        btnAdScreen = findViewById(R.id.adScreen);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAdScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AdActivity.class);
                 startActivity(intent);
             }
         });
