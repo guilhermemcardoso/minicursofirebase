@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,6 +25,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     private static String TAG = "CreateAccountActivity";
 
     private FirebaseAuth mAuth;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     private Button btnCreateAccount;
     private EditText editTextEmail;
@@ -37,6 +39,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         setTitle("Criar conta");
 
         mAuth = FirebaseAuth.getInstance();
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         editTextEmail = findViewById(R.id.edit_text_email);
         editTextPassword = findViewById(R.id.edit_text_password);
@@ -58,7 +61,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     }
 
-    private void createNewAccount(String email, String password) {
+    private void createNewAccount(final String email, final String password) {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -73,6 +76,9 @@ public class CreateAccountActivity extends AppCompatActivity {
                                     "Conta criada com sucesso.",
                                     Toast.LENGTH_SHORT).show();
 
+                            Bundle params = new Bundle();
+                            params.putString("email", email);
+                            mFirebaseAnalytics.logEvent("create_account", params);
 
                             FirebaseUser user = mAuth.getCurrentUser();
                             if (user != null) {

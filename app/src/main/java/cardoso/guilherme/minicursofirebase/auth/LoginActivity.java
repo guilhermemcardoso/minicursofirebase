@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import cardoso.guilherme.minicursofirebase.HomeActivity;
+import cardoso.guilherme.minicursofirebase.storage.HomeActivity;
 import cardoso.guilherme.minicursofirebase.R;
 
 public class LoginActivity extends AppCompatActivity {
