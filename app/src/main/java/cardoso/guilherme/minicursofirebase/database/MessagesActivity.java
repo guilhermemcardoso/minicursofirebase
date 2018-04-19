@@ -49,6 +49,9 @@ public class MessagesActivity extends AppCompatActivity {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                tvMessages.setText("");
+
                 for(DataSnapshot message : dataSnapshot.getChildren()) {
                     Message msg = message.getValue(Message.class);
                     tvMessages.setText(tvMessages.getText() + "\n" + msg.getAuthor() + ":\n" + msg.getContent()  + "\n");
