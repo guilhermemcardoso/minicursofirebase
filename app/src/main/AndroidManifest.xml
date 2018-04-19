@@ -22,7 +22,8 @@
         <activity android:name=".auth.LoginActivity" />
         <activity android:name=".auth.CreateAccountActivity" />
         <activity android:name=".storage.HomeActivity" />
-        <activity android:name=".database.MessagesActivity"></activity>
+        <activity android:name=".database.MessagesActivity" />
+        <activity android:name=".remote.AdActivity"></activity>
     </application>
 
 </manifest>

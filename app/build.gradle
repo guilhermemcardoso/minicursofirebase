@@ -32,6 +32,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:12.0.1'
     // Firebase Storage
     implementation 'com.google.firebase:firebase-storage:12.0.1'
+    // Firebase Database
+    implementation 'com.google.firebase:firebase-database:12.0.1'
+    // Firebase Remote Config
+    implementation 'com.google.firebase:firebase-config:12.0.1'
     // EasyImage
     implementation 'com.github.jkwiecien:EasyImage:1.2.3'
     // Picasso
